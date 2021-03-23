@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+
+body a {
+  text-decoration: none;
+  color: #242424;
+}
+
+body li {
+  list-style: none;
+}
+
+body .container {
+  width: 80%;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+body .styled-input {
+  background-color: #fff;
+  padding: 5px 5px 5px 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 625px;
+  margin-top: 20px;
+}
+
+body .styled-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 1em;
+  border-radius: 0.5em;
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+
+body .styled-input input:enabled {
+  border-radius: none;
+}
+
+body .styled-input button {
+  font-family: "Poppins", Helvetica, sans-serif;
+  padding: 0 25px;
+  height: 50px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 16%;
+          flex: 0 0 16%;
+  max-width: 16%;
+  margin-right: -1px;
+  border-radius: 3px;
+  font-weight: 600;
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f3723b), to(#e54750));
+  background-image: linear-gradient(to right, #f3723b, #e54750);
+  position: relative;
+  z-index: 1;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 0.875em;
+  outline: none;
+}
+
+body .styled-select {
+  width: 100%;
+  overflow: hidden;
+  height: 35px;
+  line-height: 32px;
+  border: none;
+  background-color: #f2f2f2;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding-right: 35px;
+  position: relative;
+  color: #444;
+  cursor: pointer;
+}
+
+body .styled-select::after {
+  font-family: 'ElegantIcons';
+  color: #222;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+body .styled-select select {
+  background: transparent;
+  width: 110%;
+  padding-left: 10px;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: 25px;
+  color: #444;
+  font-size: 12px;
+  font-size: 0.75rem;
+  margin: 0;
+  font-weight: 500;
+  -moz-appearance: window;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+body .header {
+  font-size: 14px;
+  padding: 15px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  z-index: 99999;
+}
+
+body .header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-size: 14px;
+}
+
+body .header .container .logo {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+}
+
+body .header .container .logo a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: inherit;
+}
+
+body .header .container .logo a img {
+  height: 100%;
+}
+
+body .header .container [class*="menu"] {
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+  height: inherit;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+body .header .container [class*="menu"] ul {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .header .container [class*="menu"] ul li {
+  padding: 5px 0;
+}
+
+body .header .container .user_menu {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  font-size: 1.5em;
+}
+
+body .main .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #faf3cc url(../img/SVG/hero_5.svg) center top no-repeat;
+  height: 620px;
+  width: 100%;
+}
+
+body .main .hero h1 {
+  font-size: 2.625rem;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1;
+}
+
+body .main .hero p {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #444;
+}
+
+body .footer {
+  padding-top: 65px;
+  position: relative;
+}
+
+body .footer .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 1fr 100px;
+      grid-template-rows: 1fr 100px;
+}
+
+body .footer .container .col h3 {
+  font-size: 0.875rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+body .footer .container .col .content {
+  border-radius: 1em;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: "Poppins", Helvetica, sans-serif;
+  color: #444;
+}
+
+body .footer .container .col .content .contacts li {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+body .footer .container .col .content .contacts li i {
+  font-size: 1.125rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #e54750;
+  line-height: 1;
+}
+
+body .footer .container .last-row {
+  grid-column: span 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .footer .container .last-row .pay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .footer .container .last-row .pay .styled-select {
+  margin-right: 1em;
+}
+
+body .footer .container .last-row .pay .styled-select::after {
+  content: "\e0e3";
+}
+
+body .footer .container .last-row .info {
+  font-size: 0.8125rem;
+}
+/*# sourceMappingURL=index.css.map */
