@@ -298,14 +298,22 @@ body .footer .container .last-row .pay {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 350px;
 }
 
 body .footer .container .last-row .pay .styled-select {
+  -webkit-box-flex: 150px;
+      -ms-flex: 150px;
+          flex: 150px;
   margin-right: 1em;
 }
 
 body .footer .container .last-row .pay .styled-select::after {
   content: "\e0e3";
+}
+
+body .footer .container .last-row .pay img {
+  width: 100%;
 }
 
 body .footer .container .last-row .info {
