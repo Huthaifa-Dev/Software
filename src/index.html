@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/fontawesome.css">
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/icons.css">
+    <link rel="stylesheet" href="style/animations.css">
 
     <title>FoodExpress</title>
 </head>
@@ -30,7 +31,7 @@
             <nav class="main_menu">
                 <ul class="menu">
                     <li class="menu_item"><a href="#" class="menu_link">Option 1</a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">Option 2</a></li>
+                    <li class="menu_item"><a href="top-listing.html" class="menu_link">Listing</a></li>
                     <li class="menu_item"><a href="#" class="menu_link">Option 3</a></li>
                 </ul>
             </nav>
@@ -48,6 +49,7 @@
             </div>
 
         </div>
+
     </header>
     <!-- End Header -->
 
@@ -70,11 +72,12 @@
                         </select>
                     </div>
 
-                    <input type="text" placeholder="Search for a City, Restaurant or">
+                    <input type="text" placeholder="Search for a City, Restaurant or Food">
                     <button class="gradient-btn-1">Submit</button>
                 </div>
 
             </div>
+            <div class="wave head"></div>
         </div>
 
         <div class="container slider">
@@ -86,7 +89,7 @@
                 <p>Chose your fav Categorie</p>
             </div>
             <div class="carousel">
-                <div class="cards-slider">
+                <div class="cards-slider" id="slide">
                     <div class="card">
                         <div class="item">
                             <a href="#">
@@ -186,6 +189,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="carousel-nav">
+                <button class="nav-btn left hidden" id="carouselLeft"><i class="far fa-long-arrow-left"></i></button>
+                <button class="nav-btn right" id="carouselRight"><i class="far fa-long-arrow-right"></i></button>
             </div>
         </div>
 
@@ -330,6 +337,7 @@
 
     <!-- Start Footer -->
     <footer class="footer">
+        <div class="wave footer"></div>
         <div class="container">
             <div class="col">
                 <h3>Quick Links</h3>
