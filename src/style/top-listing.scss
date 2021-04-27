@@ -15,7 +15,6 @@ body{
         display: block;
      }
      .main{
-
         .page_header{
             padding: 20px 0;
             
@@ -76,32 +75,28 @@ body{
 
         .top-content{
             
-            
+            padding-top: 30px;
+            padding-bottom: 20px;
             .content{
                 display: flex;
                 width:100%;
-                
-                padding: 1em 0;
-                // background-color: rgba(255, 255, 0, 0.527);
+                position: relative;
                 
                 .side-box{
-                    // border: 1px solid black;
-                    position: relative;
-                    overflow: visible;
                     box-sizing: border-box;
-                    min-height: 1px;
+                    height: 100%;
                     flex: 0 0 25%;
                     max-width: 25%;
-
                     width: 100%;
                     padding-right: 15px;
                     padding-left: 15px;
-
+                    padding-top: 0px;
+                    padding-bottom: 1px;
+                    position: sticky;
+                    top: 25px;
                     display: block;
                     
                     .stickySide{
-                        padding-top: 0px;
-                        padding-bottom: 1px;
                         
                         .drop-down{
                             position: relative;
@@ -128,8 +123,7 @@ body{
                     
                 }
                 .main-box{
-                    border: 1px solid red;
-                    // flex: 0 0 75%;
+                    flex: 0 0 75%;
                     height: 100%;
                     position: relative;
                     width: 100%;
@@ -138,17 +132,13 @@ body{
                     overflow: hidden;
                     .row{
                         position: relative;
-                        display: flex;
-                        flex-wrap: wrap;
-                        margin-right: -15px;
-                        margin-left: -15px;
                         padding: 0 1em;
                         .top-cat{
                             .owl-stage{
                                 position: relative;
                                 -ms-touch-action: pan-Y;
                                 touch-action: manipulation;
-                                -moz-backface-visibility: hidden;
+                                backface-visibility: hidden;
                                 padding-left: 0px;
                             }
                             
@@ -288,6 +278,195 @@ body{
                             font-size: 62px;
                             font-size: 3.875rem;
                             height: 52px;
+                        }
+                    }
+                    .row{
+                        justify-content: flex-start;
+                        h2{
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
+                        .top-rated-box{
+                            flex: 0 0 33.333333%;
+                            max-width: 33.333333%;
+                            position: relative;
+                            width: 100%;
+                            padding-right: 15px;
+                            padding-left: 15px;
+                            .strip{
+                                position: relative;
+                                margin-bottom: 30px;
+                                figure {
+                                    margin-bottom: 5px;
+                                    overflow: hidden;
+                                    position: relative;
+                                    height: 190px;
+                                    -webkit-border-radius: 5px;
+                                    -moz-border-radius: 5px;
+                                    -ms-border-radius: 5px;
+                                    border-radius: 5px;
+                                    background-color: #ededed;
+                                    img {
+                                        position: absolute;
+                                        
+                                        
+                                        backface-visibility: hidden;
+                                        
+                                        z-index: 1;
+                                        transition: all 0.3s ease-in-out;
+                                        
+                                        width: 100%;
+                                        height: auto;
+    
+                                    }
+                                    a.strip_info {
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: 0;
+                                        right: 0;
+                                        height: 100%;
+                                        width: 100%;
+                                        z-index: 5;
+                                        display: block;
+                                        small.categorie {
+                                            position: absolute;
+                                            background-color: white;
+                                            background-color: white;
+                                            left: 15px;
+                                            top: 15px;
+                                            color: #333;
+                                            font-weight: 500;
+                                            -webkit-border-radius: 3px;
+                                            -moz-border-radius: 3px;
+                                            -ms-border-radius: 3px;
+                                            border-radius: 3px;
+                                            padding: 6px 8px 4px 8px;
+                                            line-height: 1;
+                                            font-size: 12px;
+                                            font-size: 0.75rem;
+                                        }
+                                        .item_title {
+                                            width: 100%;
+                                            position: absolute;
+                                            bottom: 0;
+                                            left: 0;
+                                            padding: 65px 15px 10px 15px;
+                                            background: -moz-linear-gradient(top, transparent 5%, black 100%);
+                                            background: -webkit-linear-gradient(top, transparent 5%, black 100%);
+                                            background: linear-gradient(to bottom, transparent 5%, black 100%);
+                                            h3 {
+                                                font-size: 16px;
+                                                font-size: 1rem;
+                                                margin: 0;
+                                                font-weight: 500;
+                                                color: #fff;
+                                                margin: 0;
+                                                padding: 0;
+                                                line-height: 1;
+                                            }
+                                            small {
+                                                font-weight: 500;
+                                                line-height: 1;
+                                                font-size: 13px;
+                                                font-size: 0.8125rem;
+                                                color: rgba(255, 255, 255, 0.8);
+                                            }
+                                        
+                                        }
+                                    }
+                                }
+                                ul {
+                                    padding: 0;
+                                    margin: 0;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    
+                                    
+                                    li {
+                                        display: inline-block;
+                                        padding-top: 12px;
+                                        font-size: 13px;
+                                        font-size: 0.8125rem;
+                                        .take, .deliv {
+                                            font-size: 12px;
+                                            font-size: 0.75rem;
+                                            position: relative;
+                                            padding-left: 20px;
+                                            margin-right: 10px;
+                                            font-weight: 500;
+                                            color: #444;
+                                        }
+                                        .take::before, .deliv::before {
+                                            font-size: 16px;
+                                            font-size: 1rem;
+                                            font-family: "ElegantIcons";
+                                            content: "\e013";
+                                            position: absolute;
+                                            line-height: 1;
+                                            font-weight: normal;
+                                        }
+                                        .take::before {
+                                            content: "\e013";
+                                            left: 0;
+                                            top: -1px;
+                                        }
+                                        .deliv::before {
+                                            font-size: 24px;
+                                            font-size: 1.5rem;
+                                            font-family: 'food';
+                                            content: '\0074';
+                                            left: 0;
+                                            top: -4px;
+                                        }
+                                        .deliv {
+                                            padding-left: 30px;
+                                            margin-right: 0;
+                                        }
+                                    }
+                                    li:last-child {
+                                        padding: 0;
+                                        
+                                        .score strong {
+                                            padding: 10px 0 0 0;
+                                            display: inline-block;
+                                            font-size: 13px;
+                                            font-size: 0.8125rem;
+                                            font-weight: 500;
+                                            &::before {
+                                                font-family: 'ElegantIcons';
+                                                content: "\e033";
+                                                margin: -4px 3px 0 0;
+                                                color: #66cc66;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+                    }
+                    .page-nav-content{
+                        text-align: center;
+                        margin-top: 15px;
+                        a {
+                            color: #333;
+                            display: inline-block;
+                            padding: 8px 16px;
+                            text-decoration: none;
+                            transition: background-color .3s;
+                            -webkit-border-radius: 3px;
+                            -moz-border-radius: 3px;
+                            -ms-border-radius: 3px;
+                            border-radius: 3px;
+                            margin: 0 2px;
+                        }
+                        a.active {
+                            background-color: #333;
+                            color: white;
+                        }
+                        a:hover{
+                            background-color: #eee;
                         }
                     }
                 }

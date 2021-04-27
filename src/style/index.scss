@@ -79,6 +79,7 @@ body{
     .show {
         display:block;
     } 
+    
     .title-small{
         font-size: 1.3125rem;
         font-weight: 600;
@@ -98,6 +99,43 @@ body{
         margin: 0 auto;
     }
     
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .ribbon.off {
+        background-color: #f3723b;
+        &::before {
+            font-family: 'food';
+            content: '\0076';
+            position: absolute;
+            left: 8px;
+            top: 4px;
+        }
+    }
+    .ribbon {
+        color: #fff;
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-weight: 500;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        border-radius: 3px;
+        padding: 6px 8px 4px 23px;
+        line-height: 1;
+        font-size: 12px;
+        font-size: 0.75rem;
+        z-index: 9;
+    }
+
     .styled-input{
         background-color: #fff;
         padding: 5px;
@@ -194,8 +232,6 @@ body{
             }
             &:checked ~ .checkmark{
                 border: 2px solid #e54750;
-                -webkit-box-shadow: 0px 0px 0px 2px rgba(229, 71, 80, 0.3);
-                -moz-box-shadow: 0px 0px 0px 2px rgba(229, 71, 80, 0.3);
                 box-shadow: 0px 0px 0px 2px rgba(229, 71, 80, 0.3);
                 &::after{
                     opacity: 1;
@@ -236,6 +272,36 @@ body{
         color: #111;
         padding: 6px 15px;
         background: none;
+        border-radius: 3px;
+        line-height: normal;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            border-color: #e54750;
+            color: #e54750;
+        }
+    }
+    .btn-white{
+        border: none;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+        line-height: 1;
+        padding: 10px 15px;
+        font-weight: 500;
+        color: #444;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+        font-weight: 400;
+        text-align: left;
+        
+        i{
+            font-size: 1.125em;
+            margin-right:5px;
+        }
+        &:hover{
+            color: #e54750;
+            cursor: pointer;
+        }
     }
     .full-width{
         display: block;
@@ -247,8 +313,7 @@ body{
     }
     .gradient-btn-1{
         font-family: "Poppins", Helvetica, sans-serif;
-        padding: 0 25px;
-        height: 50px;
+
         flex: 0 0 16%;
         appearance: none;
         border: none;
@@ -256,15 +321,24 @@ body{
         text-align: center;
         font-size: 0.875em;
         outline: none;
-        background-image: linear-gradient(to right, #f3723b, #e54750);
+        background: linear-gradient(to right, #f3723b, #e54750);
         position: relative;
         z-index: 1;
         border-radius: 3px;
-        font-weight: 600;
         background-size: 100%;
+        display: inline-block;
+        text-decoration: none;
+        padding: 8px 25px;
+        font-weight: 500;
+        //transition: all 0.3s ease-in-out;
+        line-height: normal;
         &:hover{
             cursor: pointer;
+            background: #e54750;
         }
+    }
+    .text-center{
+        text-align: center;
     }
 
     //header style
@@ -313,6 +387,12 @@ body{
                     align-items: center;
                     li{
                         padding: 5px 0;
+                        a{
+                            transition: 0.3s all ease-in-out;
+                            &:hover{
+                                color: #e54750;
+                            }
+                        }
                     }
                 }
             }
@@ -329,6 +409,7 @@ body{
     .main{
         
         .hero{
+            margin-top: 65px;
             position: relative;
             display: flex;
             align-items: center;
@@ -360,13 +441,14 @@ body{
                         font-size: 0.85em;
                         font-family: "Poppins", Helvetica, sans-serif;
                     }
-                   
-                    
                     &::after {
                         top: 15%;
                         font-size: 1.25em;
                         content: "3";
-                    }
+                    } 
+                }
+                button.gradient-btn-1{
+                    height: 50px;
                 }
             }
         }
@@ -375,7 +457,7 @@ body{
             text-align: left;
             color: rgb(68, 68, 68);
             padding: 5em 0;
-            position: relative;
+            
             .title{
     
                 display: flex;
@@ -409,107 +491,133 @@ body{
                     font-weight: 300;
                 }
             }
-            .carousel{
-                position: relative;
-                width: 100%;
-                overflow: hidden;
-                margin: 2em 0;
-                display: block;
-                .cards-slider{
+            .cards-slider{
+                margin-top: 30px;
+                .owl-stage{
+                    position: relative;
+                    -ms-touch-action: pan-Y;
+                    touch-action: manipulation;
+                    backface-visibility: hidden;
+                    padding-left: 0px;
+                    
+                }   
+                .owl-nav{
                     display: flex;
-                    height: 280px;
-                    width: 2000px;
-                    .card{
-                        height: 100%;
-                        width: 220px;
-                        margin-right: 20px;
-                        .item{                            
-                            height: inherit;
-                            
-                            a{
-                               
-                                width: inherit;
-                                height: inherit;
-                                display: block;
-                                border-radius: 0.5em;
-                                overflow: hidden;
-                                figure{
-                                    height: inherit;
-                                    position: relative;
-                                    overflow: hidden;
-                                    text-align: center;
-                                    img{
-                                        width: auto;
-                                        position: absolute;
-                                        right: -40%;
-                                        height: 100%;
-                                        
-                                    }
-                                    span{
-                                        position: absolute;
-                                        right: 15px;
-                                        top: 15px;
-                                        background-color: white;
-                                        border-radius: 100%;
-                                        padding: 0.25em;
-                                        box-shadow: 0 0 10px -5px rgb(0, 0, 0);
-                                        z-index: 9;
-                                    }
-                                    .info{
-                                        text-align: left;
-                                        z-index: 9;
-                                        color: white;
-                                        padding: 1em;
-                                        position: absolute;
-                                        left: 0;
-                                        bottom: 0;
-                                        width: 100%;
-                                        background: linear-gradient(to bottom, transparent, #000);
-                                        font-size: 0.875em;
-                                        line-height: 1;
-                                        p{
-                                            font-weight: 300;
-                                        }
-                                    }
-                                }
-                            }
-
+                    justify-content: space-between;
+                    position: absolute;
+                    width: 100%;
+                    top: 40%;
+                    height: 0px;
+                    button{
+                        border: none;
+                        border-radius: 100%;
+                        width: 50px;
+                        height: 50px;
+                        background-color: white;
+                        font-size: 1.5em;
+                        color: #999;
+                        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+                        &:hover{
+                            color: #e54750;
+                            cursor: pointer;
+                        }
+                        transition: all 0.25s ease;
+                        span{
+                            visibility: hidden;
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            &::after{
+                                visibility: visible;
+                            }   
                         }
                     }
-                }
-
-            } 
-            .carousel-nav{
-                display: flex;
-                justify-content: space-between;
-                position: absolute;
-                width: 100%;
-                
-                top: 55%;
-                .nav-btn{
-                    border: none;
-                    border-radius: 100%;
-                    width: 50px;
-                    height: 50px;
-                    background-color: white;
-                    font-size: 1.5em;
-                    color: #999;
-                    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-                    &:hover{
-                        color: #e54750;
-                        cursor: pointer;
+                    button:nth-child(1){
+                        span::after{
+                            content: "\23";
+                            font-size: 1.25em;
+                            font-family: 'ElegantIcons';
+                        }
                     }
-                    transition: all 0.25s ease;
+                    button:nth-child(2){
+                        span::after{
+                            content: "\24";
+                            font-size: 1.25em;
+                            font-family: 'ElegantIcons';
+                            margin-left: -10px;
+                        }
+                    }
+                    .owl-prev{
+                        margin-left: -30px;
+                    }
+                    .owl-next{
+                        margin-right: -30px;
+                    }
+                    .disabled{
+                        span::after{
+                            visibility: hidden;
+                        }
+                        visibility: hidden;
+                        transition: none;
+                    }
                 }
-                .left{
-                    margin-left: -30px;
+               
+                .item{
+                    border: 1px solid red;
+                    width: 220px;
+                    height: 300px;
                     
-                }
-                .right{
-                    margin-right: -30px;
-
-                }
+                    a{
+                        width: inherit;
+                        height: inherit;
+                        display: block;
+                        border-radius: 0.5em;
+                        overflow: hidden;
+                        figure{
+                            height: inherit;
+                            position: relative;
+                            overflow: hidden;
+                            text-align: center;
+                            img{
+                                width: auto;
+                                position: absolute;
+                                right: -40%;
+                                height: 100%;
+                                
+                            }
+                            span{
+                                position: absolute;
+                                right: 15px;
+                                top: 15px;
+                                background-color: white;
+                                border-radius: 100%;
+                                padding: 0.25em;
+                                box-shadow: 0 0 10px -5px rgb(0, 0, 0);
+                                z-index: 9;
+                            }
+                            .info{
+                                text-align: left;
+                                z-index: 9;
+                                color: white;
+                                padding: 1em;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                width: 100%;
+                                background: linear-gradient(to bottom, transparent, #000);
+                                font-size: 0.875em;
+                                line-height: 1;
+                                p{
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                    }
+                }   
             }
+            
+            
         }
 
         .top-rated{
